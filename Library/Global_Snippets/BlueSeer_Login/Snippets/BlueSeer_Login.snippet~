@@ -1,0 +1,1219 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<object class="Snippet" serializationversion="0">
+  <prologue>
+    <saved-by-versions>
+      <version>10.5.0.0</version>
+    </saved-by-versions>
+    <referenced-types>
+      <type name="BlueSeer_Login_Output"/>
+      <type name="BlueSeer_Login_Static"/>
+    </referenced-types>
+    <referenced-snippets/>
+    <triggers/>
+    <typed-variables>
+      <typed-variable name="BlueSeer_Login_Output" type-name="BlueSeer_Login_Output"/>
+      <typed-variable name="BlueSeer_Login_Static" type-name="BlueSeer_Login_Static"/>
+    </typed-variables>
+    <global-variables>
+      <variable name="BlueSeer_Login_Output"/>
+    </global-variables>
+    <parameters/>
+    <return-variables/>
+    <store-in-database-variables/>
+    <device-mappings>
+      <mapping name="DA"/>
+    </device-mappings>
+    <browser-engine>WEBKIT</browser-engine>
+  </prologue>
+  <property name="variables" class="Variables">
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">BlueSeer_Login_Output</property>
+      <property name="global" class="Boolean">true</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">BlueSeer_Login_Output</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">BlueSeer_Login_Static</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">BlueSeer_Login_Static</property>
+        </property>
+      </property>
+    </object>
+  </property>
+  <comment class="String"/>
+  <body class="Body">
+    <blockBeginStep class="BlockBeginStep" id="0"/>
+    <steps class="ArrayList">
+      <object class="Try" id="1">
+        <property name="name" class="String" id="2">Error Open</property>
+      </object>
+      <object class="Transition" serializationversion="3" id="3">
+        <property name="name" class="String">Open BlueSeer</property>
+        <property name="stepAction" class="CallRL2Robot">
+          <property name="inputValueExpression" class="kapow.robot.plugin.common.stepaction.rl2.InputValueBeanList">
+            <object class="kapow.robot.plugin.common.stepaction.rl2.InputValue">
+              <property name="inputValueExpression" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
+                <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+                  <property name="name" class="String">BlueSeer_Login_Static.exePath</property>
+                </property>
+              </property>
+            </object>
+          </property>
+          <property name="remoteHubReferences" class="kapow.robot.plugin.common.stepaction.rl2.RemoteHubReferences">
+            <object class="kapow.robot.plugin.common.stepaction.rl2.RemoteHubReference" serializationversion="1">
+              <property name="reference" class="kapow.robot.plugin.common.stepaction.rl2.RemoteHubReference$StaticReference">
+                <property name="deviceName" class="String">DA</property>
+              </property>
+            </object>
+          </property>
+          <property name="robot2Bean" class="kapow.robot.plugin.common.stepaction.rl2.Robot2Bean">{
+  "meta":{
+    "className":"Robot",
+    "version":2
+  },
+  "gizmo":{
+    "outputTypes": [],
+    "parameters": [{
+      "meta":{
+        "className":"VariableDef",
+        "version":0
+      },
+      "gizmo":{
+        "id": { "string": "BlueSeer_Login_Static_exePath" },
+        "typ": {
+          "meta":{
+            "className":"TypeUse",
+            "version":0
+          },
+          "gizmo":{
+            "id": { "string": "Text" }
+          }
+        }
+      }
+    }],
+    "treeModes": [],
+    "types": [],
+    "variables": [],
+    "block": {
+      "meta":{
+        "className":"Block",
+        "version":1
+      },
+      "gizmo":{
+        "steps": [{
+          "meta":{
+            "className":"PressKeyStep",
+            "version":0
+          },
+          "gizmo":{
+            "name": {
+              "meta":{
+                "className":"StepName",
+                "version":0
+              },
+              "gizmo":{
+                "customName": { "string": "Press Win + R" }
+              }
+            },
+            "finder": {
+              "meta":{
+                "className":"ApplicationFinderWithName",
+                "version":5
+              },
+              "gizmo":{
+                "name": {
+                  "meta":{
+                    "className":"FinderName",
+                    "version":0
+                  },
+                  "gizmo":{
+                    "id": { "string": "" }
+                  }
+                },
+                "finder": {
+                  "meta":{
+                    "className":"ApplicationDescriptor",
+                    "version":0
+                  },
+                  "gizmo":{
+                    "deviceFinder": {
+                      "meta":{
+                        "className":"DeviceReference",
+                        "version":0
+                      },
+                      "gizmo":{
+                        "reference": {
+                          "meta":{
+                            "className":"NamedFinderReference",
+                            "version":0
+                          },
+                          "gizmo":{
+                            "id": { "string": "DA" }
+                          }
+                        }
+                      }
+                    },
+                    "applicationSelector": {
+                      "meta":{
+                        "className":"Expression",
+                        "version":0
+                      },
+                      "gizmo":{
+                        "text": { "string": "Windows[title=\"Taskbar\"]" }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "key": {
+              "meta":{
+                "className":"CalculatedKey",
+                "version":0
+              },
+              "gizmo":{
+                "expression": {
+                  "meta":{
+                    "className":"Expression",
+                    "version":0
+                  },
+                  "gizmo":{
+                    "text": { "string": "v0x5b v0x52 v0x5b,fu v0x52,fu" }
+                  }
+                }
+              }
+            },
+            "modifier": {
+              "meta":{
+                "className":"FixedKeyModifier",
+                "version":0
+              },
+              "gizmo":{
+                "shift": { "boolean": "false" },
+                "ctrl": { "boolean": "false" },
+                "alt": { "boolean": "false" }
+              }
+            },
+            "count": {
+              "meta":{
+                "className":"Expression",
+                "version":0
+              },
+              "gizmo":{
+                "text": { "string": "1" }
+              }
+            }
+          }
+        },
+        {
+          "meta":{
+            "className":"GuardedChoiceStep",
+            "version":0
+          },
+          "gizmo":{
+            "name": {
+              "meta":{
+                "className":"StepName",
+                "version":0
+              },
+              "gizmo":{
+                "customName": { "string": "Find Run" }
+              }
+            },
+            "branches": [{
+              "meta":{
+                "className":"GuardAndBlock",
+                "version":3
+              },
+              "gizmo":{
+                "guard": {
+                  "meta":{
+                    "className":"ApplicationFoundGuard",
+                    "version":0
+                  },
+                  "gizmo":{
+                    "finder": {
+                      "meta":{
+                        "className":"ApplicationFinderWithName",
+                        "version":5
+                      },
+                      "gizmo":{
+                        "name": {
+                          "meta":{
+                            "className":"FinderName",
+                            "version":0
+                          },
+                          "gizmo":{
+                            "id": { "string": "Run" }
+                          }
+                        },
+                        "finder": {
+                          "meta":{
+                            "className":"ApplicationDescriptor",
+                            "version":0
+                          },
+                          "gizmo":{
+                            "deviceFinder": {
+                              "meta":{
+                                "className":"DeviceReference",
+                                "version":0
+                              },
+                              "gizmo":{
+                                "reference": {
+                                  "meta":{
+                                    "className":"NamedFinderReference",
+                                    "version":0
+                                  },
+                                  "gizmo":{
+                                    "id": { "string": "DA" }
+                                  }
+                                }
+                              }
+                            },
+                            "applicationSelector": {
+                              "meta":{
+                                "className":"Expression",
+                                "version":0
+                              },
+                              "gizmo":{
+                                "text": { "string": "explorer.exe[title=\"Run\"]" }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "block": {
+                  "meta":{
+                    "className":"Block",
+                    "version":1
+                  },
+                  "gizmo":{
+                    "steps": []
+                  }
+                }
+              }
+            },
+            {
+              "meta":{
+                "className":"GuardAndBlock",
+                "version":3
+              },
+              "gizmo":{
+                "guard": {
+                  "meta":{
+                    "className":"TimeOutGuard",
+                    "version":0
+                  },
+                  "gizmo":{
+                    "seconds": {
+                      "meta":{
+                        "className":"Expression",
+                        "version":0
+                      },
+                      "gizmo":{
+                        "text": { "string": "60" }
+                      }
+                    }
+                  }
+                },
+                "block": {
+                  "meta":{
+                    "className":"Block",
+                    "version":1
+                  },
+                  "gizmo":{
+                    "steps": [{
+                      "meta":{
+                        "className":"ThrowStep",
+                        "version":0
+                      },
+                      "gizmo":{
+                        "name": {
+                          "meta":{
+                            "className":"StepName",
+                            "version":0
+                          },
+                          "gizmo":{
+                            "customName": { "string": "" }
+                          }
+                        },
+                        "exception": {
+                          "meta":{
+                            "className":"ExceptionUse",
+                            "version":0
+                          },
+                          "gizmo":{
+                            "id": { "string": "RunNotFound" }
+                          }
+                        }
+                      }
+                    }]
+                  }
+                }
+              }
+            }]
+          }
+        },
+        {
+          "meta":{
+            "className":"GuardedChoiceStep",
+            "version":0
+          },
+          "gizmo":{
+            "name": {
+              "meta":{
+                "className":"StepName",
+                "version":0
+              },
+              "gizmo":{
+                "customName": { "string": "Enter runstring" }
+              }
+            },
+            "branches": [{
+              "meta":{
+                "className":"GuardAndBlock",
+                "version":3
+              },
+              "gizmo":{
+                "guard": {
+                  "meta":{
+                    "className":"LocationFoundGuard",
+                    "version":0
+                  },
+                  "gizmo":{
+                    "finder": {
+                      "meta":{
+                        "className":"ComponentFinderWithName",
+                        "version":8
+                      },
+                      "gizmo":{
+                        "name": {
+                          "meta":{
+                            "className":"FinderName",
+                            "version":0
+                          },
+                          "gizmo":{
+                            "id": { "string": "" }
+                          }
+                        },
+                        "finder": {
+                          "meta":{
+                            "className":"ComponentDescriptor",
+                            "version":0
+                          },
+                          "gizmo":{
+                            "applicationFinder": {
+                              "meta":{
+                                "className":"ApplicationReference",
+                                "version":0
+                              },
+                              "gizmo":{
+                                "reference": {
+                                  "meta":{
+                                    "className":"NamedFinderReference",
+                                    "version":0
+                                  },
+                                  "gizmo":{
+                                    "id": { "string": "Run" }
+                                  }
+                                }
+                              }
+                            },
+                            "componentSelector": {
+                              "meta":{
+                                "className":"Expression",
+                                "version":0
+                              },
+                              "gizmo":{
+                                "text": { "string": "edit[name=\"Open:\"]" }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "block": {
+                  "meta":{
+                    "className":"Block",
+                    "version":1
+                  },
+                  "gizmo":{
+                    "steps": [{
+                      "meta":{
+                        "className":"MoveMouseStep",
+                        "version":0
+                      },
+                      "gizmo":{
+                        "name": {
+                          "meta":{
+                            "className":"StepName",
+                            "version":0
+                          },
+                          "gizmo":{
+                            "customName": { "string": "" }
+                          }
+                        },
+                        "finder": {
+                          "meta":{
+                            "className":"ComponentFinderWithName",
+                            "version":8
+                          },
+                          "gizmo":{
+                            "name": {
+                              "meta":{
+                                "className":"FinderName",
+                                "version":0
+                              },
+                              "gizmo":{
+                                "id": { "string": "" }
+                              }
+                            },
+                            "finder": {
+                              "meta":{
+                                "className":"ComponentReference",
+                                "version":0
+                              },
+                              "gizmo":{
+                                "reference": {
+                                  "meta":{
+                                    "className":"PreviousFinderReference",
+                                    "version":0
+                                  },
+                                  "gizmo":{
+                                    
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "offset": {
+                          "meta":{
+                            "className":"NoOffset",
+                            "version":0
+                          },
+                          "gizmo":{
+                            
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "meta":{
+                        "className":"ClickStep",
+                        "version":1
+                      },
+                      "gizmo":{
+                        "name": {
+                          "meta":{
+                            "className":"StepName",
+                            "version":0
+                          },
+                          "gizmo":{
+                            "customName": { "string": "" }
+                          }
+                        },
+                        "finder": {
+                          "meta":{
+                            "className":"ApplicationFinderWithName",
+                            "version":5
+                          },
+                          "gizmo":{
+                            "name": {
+                              "meta":{
+                                "className":"FinderName",
+                                "version":0
+                              },
+                              "gizmo":{
+                                "id": { "string": "" }
+                              }
+                            },
+                            "finder": {
+                              "meta":{
+                                "className":"ApplicationReference",
+                                "version":0
+                              },
+                              "gizmo":{
+                                "reference": {
+                                  "meta":{
+                                    "className":"PreviousFinderReference",
+                                    "version":0
+                                  },
+                                  "gizmo":{
+                                    
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "mouseAction": {
+                          "meta":{
+                            "className":"ClickAction",
+                            "version":0
+                          },
+                          "gizmo":{
+                            "button": {
+                              "meta":{
+                                "className":"FixedButton",
+                                "version":0
+                              },
+                              "gizmo":{
+                                "button": { "int": "0" }
+                              }
+                            },
+                            "count": {
+                              "meta":{
+                                "className":"Expression",
+                                "version":0
+                              },
+                              "gizmo":{
+                                "text": { "string": "2" }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "meta":{
+                        "className":"PressKeyStep",
+                        "version":0
+                      },
+                      "gizmo":{
+                        "name": {
+                          "meta":{
+                            "className":"StepName",
+                            "version":0
+                          },
+                          "gizmo":{
+                            "customName": { "string": "Press Ctrl + A" }
+                          }
+                        },
+                        "finder": {
+                          "meta":{
+                            "className":"ApplicationFinderWithName",
+                            "version":5
+                          },
+                          "gizmo":{
+                            "name": {
+                              "meta":{
+                                "className":"FinderName",
+                                "version":0
+                              },
+                              "gizmo":{
+                                "id": { "string": "" }
+                              }
+                            },
+                            "finder": {
+                              "meta":{
+                                "className":"ApplicationReference",
+                                "version":0
+                              },
+                              "gizmo":{
+                                "reference": {
+                                  "meta":{
+                                    "className":"PreviousFinderReference",
+                                    "version":0
+                                  },
+                                  "gizmo":{
+                                    
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "key": {
+                          "meta":{
+                            "className":"FixedKey",
+                            "version":0
+                          },
+                          "gizmo":{
+                            "virtualKeyCode": { "string": "VK_A" }
+                          }
+                        },
+                        "modifier": {
+                          "meta":{
+                            "className":"FixedKeyModifier",
+                            "version":0
+                          },
+                          "gizmo":{
+                            "shift": { "boolean": "false" },
+                            "ctrl": { "boolean": "true" },
+                            "alt": { "boolean": "false" }
+                          }
+                        },
+                        "count": {
+                          "meta":{
+                            "className":"Expression",
+                            "version":0
+                          },
+                          "gizmo":{
+                            "text": { "string": "1" }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "meta":{
+                        "className":"EnterTextStep",
+                        "version":0
+                      },
+                      "gizmo":{
+                        "name": {
+                          "meta":{
+                            "className":"StepName",
+                            "version":0
+                          },
+                          "gizmo":{
+                            "customName": { "string": "Input Text" }
+                          }
+                        },
+                        "finder": {
+                          "meta":{
+                            "className":"ApplicationFinderWithName",
+                            "version":5
+                          },
+                          "gizmo":{
+                            "name": {
+                              "meta":{
+                                "className":"FinderName",
+                                "version":0
+                              },
+                              "gizmo":{
+                                "id": { "string": "" }
+                              }
+                            },
+                            "finder": {
+                              "meta":{
+                                "className":"ApplicationReference",
+                                "version":0
+                              },
+                              "gizmo":{
+                                "reference": {
+                                  "meta":{
+                                    "className":"PreviousFinderReference",
+                                    "version":0
+                                  },
+                                  "gizmo":{
+                                    
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "text": {
+                          "meta":{
+                            "className":"Expression",
+                            "version":0
+                          },
+                          "gizmo":{
+                            "text": { "string": "=BlueSeer_Login_Static_exePath" }
+                          }
+                        }
+                      }
+                    }]
+                  }
+                }
+              }
+            },
+            {
+              "meta":{
+                "className":"GuardAndBlock",
+                "version":3
+              },
+              "gizmo":{
+                "guard": {
+                  "meta":{
+                    "className":"TimeOutGuard",
+                    "version":0
+                  },
+                  "gizmo":{
+                    "seconds": {
+                      "meta":{
+                        "className":"Expression",
+                        "version":0
+                      },
+                      "gizmo":{
+                        "text": { "string": "60" }
+                      }
+                    }
+                  }
+                },
+                "block": {
+                  "meta":{
+                    "className":"Block",
+                    "version":1
+                  },
+                  "gizmo":{
+                    "steps": [{
+                      "meta":{
+                        "className":"ThrowStep",
+                        "version":0
+                      },
+                      "gizmo":{
+                        "name": {
+                          "meta":{
+                            "className":"StepName",
+                            "version":0
+                          },
+                          "gizmo":{
+                            "customName": { "string": "" }
+                          }
+                        },
+                        "exception": {
+                          "meta":{
+                            "className":"ExceptionUse",
+                            "version":0
+                          },
+                          "gizmo":{
+                            "id": { "string": "TimeOutError" }
+                          }
+                        }
+                      }
+                    }]
+                  }
+                }
+              }
+            }]
+          }
+        },
+        {
+          "meta":{
+            "className":"PressKeyStep",
+            "version":0
+          },
+          "gizmo":{
+            "name": {
+              "meta":{
+                "className":"StepName",
+                "version":0
+              },
+              "gizmo":{
+                "customName": { "string": "Press Enter" }
+              }
+            },
+            "finder": {
+              "meta":{
+                "className":"ApplicationFinderWithName",
+                "version":5
+              },
+              "gizmo":{
+                "name": {
+                  "meta":{
+                    "className":"FinderName",
+                    "version":0
+                  },
+                  "gizmo":{
+                    "id": { "string": "" }
+                  }
+                },
+                "finder": {
+                  "meta":{
+                    "className":"ApplicationReference",
+                    "version":0
+                  },
+                  "gizmo":{
+                    "reference": {
+                      "meta":{
+                        "className":"NamedFinderReference",
+                        "version":0
+                      },
+                      "gizmo":{
+                        "id": { "string": "Run" }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "key": {
+              "meta":{
+                "className":"FixedKey",
+                "version":0
+              },
+              "gizmo":{
+                "virtualKeyCode": { "string": "VK_RETURN" }
+              }
+            },
+            "modifier": {
+              "meta":{
+                "className":"FixedKeyModifier",
+                "version":0
+              },
+              "gizmo":{
+                "shift": { "boolean": "false" },
+                "ctrl": { "boolean": "false" },
+                "alt": { "boolean": "false" }
+              }
+            },
+            "count": {
+              "meta":{
+                "className":"Expression",
+                "version":0
+              },
+              "gizmo":{
+                "text": { "string": "1" }
+              }
+            }
+          }
+        },
+        {
+          "meta":{
+            "className":"ReturnStep",
+            "version":0
+          },
+          "gizmo":{
+            "name": {
+              "meta":{
+                "className":"StepName",
+                "version":0
+              },
+              "gizmo":{
+                "customName": { "string": "" }
+              }
+            },
+            "values": []
+          }
+        }]
+      }
+    }
+  }
+}</property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative">
+            <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
+              <property name="name" idref="2"/>
+            </property>
+          </property>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" class="Boolean" id="4">true</property>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="5">
+        <property name="name" class="String">Verify BlueSeer is Open</property>
+        <property name="stepAction" class="CallRL2Robot">
+          <property name="remoteHubReferences" class="kapow.robot.plugin.common.stepaction.rl2.RemoteHubReferences">
+            <object class="kapow.robot.plugin.common.stepaction.rl2.RemoteHubReference" serializationversion="1">
+              <property name="reference" class="kapow.robot.plugin.common.stepaction.rl2.RemoteHubReference$StaticReference">
+                <property name="deviceName" class="String">DA</property>
+              </property>
+            </object>
+          </property>
+          <property name="robot2Bean" class="kapow.robot.plugin.common.stepaction.rl2.Robot2Bean">{
+  "meta":{
+    "className":"Robot",
+    "version":2
+  },
+  "gizmo":{
+    "outputTypes": [],
+    "parameters": [],
+    "treeModes": [],
+    "types": [],
+    "variables": [],
+    "block": {
+      "meta":{
+        "className":"Block",
+        "version":1
+      },
+      "gizmo":{
+        "steps": [{
+          "meta":{
+            "className":"GuardedChoiceStep",
+            "version":0
+          },
+          "gizmo":{
+            "name": {
+              "meta":{
+                "className":"StepName",
+                "version":0
+              },
+              "gizmo":{
+                "customName": { "string": "Verify BlueSeer is open" }
+              }
+            },
+            "branches": [{
+              "meta":{
+                "className":"GuardAndBlock",
+                "version":3
+              },
+              "gizmo":{
+                "guard": {
+                  "meta":{
+                    "className":"LocationFoundGuard",
+                    "version":0
+                  },
+                  "gizmo":{
+                    "finder": {
+                      "meta":{
+                        "className":"ComponentFinderWithName",
+                        "version":8
+                      },
+                      "gizmo":{
+                        "name": {
+                          "meta":{
+                            "className":"FinderName",
+                            "version":0
+                          },
+                          "gizmo":{
+                            "id": { "string": "" }
+                          }
+                        },
+                        "finder": {
+                          "meta":{
+                            "className":"ComponentDescriptor",
+                            "version":0
+                          },
+                          "gizmo":{
+                            "applicationFinder": {
+                              "meta":{
+                                "className":"ApplicationDescriptor",
+                                "version":0
+                              },
+                              "gizmo":{
+                                "deviceFinder": {
+                                  "meta":{
+                                    "className":"DeviceReference",
+                                    "version":0
+                                  },
+                                  "gizmo":{
+                                    "reference": {
+                                      "meta":{
+                                        "className":"NamedFinderReference",
+                                        "version":0
+                                      },
+                                      "gizmo":{
+                                        "id": { "string": "DA" }
+                                      }
+                                    }
+                                  }
+                                },
+                                "applicationSelector": {
+                                  "meta":{
+                                    "className":"Expression",
+                                    "version":0
+                                  },
+                                  "gizmo":{
+                                    "text": { "string": "javaw.exe" }
+                                  }
+                                }
+                              }
+                            },
+                            "componentSelector": {
+                              "meta":{
+                                "className":"Expression",
+                                "version":0
+                              },
+                              "gizmo":{
+                                "text": { "string": "menu[name=\"Address\"]" }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "block": {
+                  "meta":{
+                    "className":"Block",
+                    "version":1
+                  },
+                  "gizmo":{
+                    "steps": []
+                  }
+                }
+              }
+            },
+            {
+              "meta":{
+                "className":"GuardAndBlock",
+                "version":3
+              },
+              "gizmo":{
+                "guard": {
+                  "meta":{
+                    "className":"TimeOutGuard",
+                    "version":0
+                  },
+                  "gizmo":{
+                    "seconds": {
+                      "meta":{
+                        "className":"Expression",
+                        "version":0
+                      },
+                      "gizmo":{
+                        "text": { "string": "60" }
+                      }
+                    }
+                  }
+                },
+                "block": {
+                  "meta":{
+                    "className":"Block",
+                    "version":1
+                  },
+                  "gizmo":{
+                    "steps": [{
+                      "meta":{
+                        "className":"ThrowStep",
+                        "version":0
+                      },
+                      "gizmo":{
+                        "name": {
+                          "meta":{
+                            "className":"StepName",
+                            "version":0
+                          },
+                          "gizmo":{
+                            "customName": { "string": "" }
+                          }
+                        },
+                        "exception": {
+                          "meta":{
+                            "className":"ExceptionUse",
+                            "version":0
+                          },
+                          "gizmo":{
+                            "id": { "string": "BlueSeerNotFound" }
+                          }
+                        }
+                      }
+                    }]
+                  }
+                }
+              }
+            }]
+          }
+        },
+        {
+          "meta":{
+            "className":"ReturnStep",
+            "version":0
+          },
+          "gizmo":{
+            "name": {
+              "meta":{
+                "className":"StepName",
+                "version":0
+              },
+              "gizmo":{
+                "customName": { "string": "" }
+              }
+            },
+            "values": []
+          }
+        }]
+      }
+    }
+  }
+}</property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative">
+            <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
+              <property name="name" idref="2"/>
+            </property>
+          </property>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="4"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="6">
+        <property name="name" class="String">Assign Error Message</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="4">
+          <property name="stringExpr" class="Expression" serializationversion="1">
+            <property name="text" class="String">"Error Open BlueSeer: "+Robot.executionErrors</property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">BlueSeer_Login_Output.errorMessage</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="4"/>
+        <property name="changedProperties" class="java.util.HashSet"/>
+      </object>
+      <object class="Transition" serializationversion="3" id="7">
+        <property name="name" class="String">Assign Has Error</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="4">
+          <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+            <property name="value" class="String">true</property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">BlueSeer_Login_Output.hasError</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="4"/>
+        <property name="changedProperties" class="java.util.HashSet"/>
+      </object>
+    </steps>
+    <blockEndStep class="BlockEndStep" id="8"/>
+    <edges class="ArrayList">
+      <object class="TransitionEdge">
+        <from idref="0"/>
+        <to idref="1"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="1"/>
+        <to idref="3"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="1"/>
+        <to idref="6"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="3"/>
+        <to idref="5"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="5"/>
+        <to idref="8"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="6"/>
+        <to idref="7"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="7"/>
+        <to idref="8"/>
+      </object>
+    </edges>
+  </body>
+</object>

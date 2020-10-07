@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<object class="Snippet" serializationversion="0">
+  <prologue>
+    <saved-by-versions>
+      <version>10.5.0.0</version>
+    </saved-by-versions>
+    <referenced-types>
+      <type name="MnA_Output"/>
+      <type name="MnA_Input"/>
+      <type name="MnA_Dynamic"/>
+      <type name="customerInput"/>
+      <type name="Credentials_OpenCart"/>
+    </referenced-types>
+    <referenced-snippets/>
+    <triggers/>
+    <typed-variables>
+      <typed-variable name="Output" type-name="MnA_Output"/>
+      <typed-variable name="MnA_Input" type-name="MnA_Input"/>
+      <typed-variable name="Dynamic" type-name="MnA_Dynamic"/>
+      <typed-variable name="customerInput" type-name="customerInput"/>
+      <typed-variable name="Credentials_OpenCart" type-name="Credentials_OpenCart"/>
+    </typed-variables>
+    <global-variables>
+      <variable name="Output"/>
+      <variable name="MnA_Input"/>
+      <variable name="Dynamic"/>
+    </global-variables>
+    <parameters>
+      <parameter name="MnA_Input" type-name="MnA_Input"/>
+    </parameters>
+    <return-variables/>
+    <store-in-database-variables/>
+    <device-mappings/>
+    <browser-engine>WEBKIT</browser-engine>
+  </prologue>
+  <property name="variables" class="Variables">
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">Output</property>
+      <property name="global" class="Boolean">true</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">MnA_Output</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">MnA_Input</property>
+      <property name="parameter" class="Boolean">true</property>
+      <property name="global" class="Boolean">true</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">MnA_Input</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">Dynamic</property>
+      <property name="global" class="Boolean">true</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">MnA_Dynamic</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">customerInput</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">customerInput</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">Credentials_OpenCart</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">Credentials_OpenCart</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">inputPath</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="SimpleTypeReference">
+          <property name="simpleTypeId" class="Integer">12</property>
+        </property>
+      </property>
+    </object>
+  </property>
+  <comment class="String"/>
+  <body class="Body">
+    <blockBeginStep class="BlockBeginStep" id="0"/>
+    <steps class="ArrayList">
+      <object class="Transition" serializationversion="3" id="1">
+        <property name="name" class="String">Assign Error Message</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="4">
+          <property name="stringExpr" class="Expression" serializationversion="1">
+            <property name="text" class="String">Dynamic.errorMessage == "" ? Robot.executionErrors : Dynamic.errorMessage</property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">Dynamic.errorMessage</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" class="Boolean" id="2">true</property>
+        <property name="changedProperties" class="java.util.HashSet"/>
+      </object>
+      <object class="Transition" serializationversion="3" id="3">
+        <property name="name" class="String">Go to iteration error handling</property>
+        <property name="stepAction" class="GenerateError">
+          <property name="errorMessageExpression" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
+            <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+              <property name="name" class="String">Dynamic.errorMessage</property>
+            </property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="changedProperties" class="java.util.HashSet">
+            <element class="String">reportingViaLog</element>
+          </property>
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative">
+            <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
+              <property name="name" class="String">Iteration error handling</property>
+            </property>
+          </property>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+    </steps>
+    <blockEndStep class="BlockEndStep" id="4"/>
+    <edges class="ArrayList">
+      <object class="TransitionEdge">
+        <from idref="0"/>
+        <to idref="1"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="1"/>
+        <to idref="3"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="3"/>
+        <to idref="4"/>
+      </object>
+    </edges>
+  </body>
+</object>

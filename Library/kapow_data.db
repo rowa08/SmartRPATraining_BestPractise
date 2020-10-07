@@ -1,0 +1,5 @@
+#Database Mapping
+#Wed Nov 21 10:27:52 CET 2018
+dbConnectionDisplayName=kapow_data (Management Console)
+mapToDatabaseConfiguration=kapow_data
+showWarnings=true

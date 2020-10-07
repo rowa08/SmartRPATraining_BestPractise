@@ -1,0 +1,6 @@
+#Hub Mapping
+#Wed Nov 21 14:10:49 CET 2018
+port=49998
+token=mytoken
+type=direct
+host=localhost
