@@ -177,7 +177,7 @@
         <property name="comment">
           <null/>
         </property>
-        <property name="enabled" idref="2"/>
+        <property name="enabled" idref="1"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
       <object class="SnippetStep" id="14">
